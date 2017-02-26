@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/order_icon"
+        android:padding="8dp"/>
+
+    <TextView
+        android:id="@+id/order_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="我的租用订单"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:paddingLeft="5dp"
+        android:layout_toRightOf="@+id/icon"/>
+
+    <TextView
+        android:id="@+id/order_stage"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="@string/stage1"
+        android:gravity="center_vertical"
+        android:textColor="#e8591a"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentRight="true"/>
+
+</RelativeLayout>

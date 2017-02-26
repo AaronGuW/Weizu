@@ -1,0 +1,39 @@
+Applications Memory Usage (kB):
+Uptime: 127627282 Realtime: 857387315
+
+** MEMINFO in pid 10133 [com.demo.aaron.weizu] **
+                   Pss  Private  Private  Swapped     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------
+  Native Heap        0        0        0        0     8560     6135      348
+  Dalvik Heap    43482    43288        0     8760    55096    52786     2310
+ Dalvik Other     2549     2480        0      496                           
+        Stack      228      228        0        4                           
+    Other dev     7078     5424        4        0                           
+     .so mmap     2053     1456        8     2088                           
+    .apk mmap      185        0      100        0                           
+    .ttf mmap      463        0       32        0                           
+    .dex mmap     2008      216      960       20                           
+   Other mmap       19        4        0        0                           
+     Graphics    10488    10488        0        0                           
+           GL    11624    11624        0        0                           
+      Unknown     2819     2816        0      144                           
+        TOTAL    82996    78024     1104    11512    63656    58921     2658
+ 
+ Objects
+               Views:      189         ViewRootImpl:        5
+         AppContexts:        6           Activities:        4
+              Assets:        5        AssetManagers:        5
+       Local Binders:       21        Proxy Binders:       24
+    Death Recipients:        2
+     OpenSSL Sockets:        0
+ 
+ SQL
+         MEMORY_USED:      341
+  PAGECACHE_OVERFLOW:      111          MALLOC_SIZE:       62
+ 
+ DATABASES
+      pgsz     dbsz   Lookaside(b)          cache  Dbname
+         4       36             18         0/15/1  /data/data/com.demo.aaron.weizu/databases/Weizu.db
+         4       36             26         2/37/5  /data/data/com.demo.aaron.weizu/databases/Weizu.db
+         4       44             22         0/35/3  /data/data/com.demo.aaron.weizu/files/c9kqb3rdkgr3j/9/IMKitUserInfoCache

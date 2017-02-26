@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <View
+            android:layout_width="0.7dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:background="#aaaaaa"/>
+
+        <ImageView
+            android:id="@+id/dot"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/past"
+            android:layout_marginTop="12dp"
+            android:layout_gravity="center_horizontal"/>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="7"
+        android:paddingRight="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:lineSpacingMultiplier="1.2"
+            android:textColor="#888888"
+            android:text="【上海市】 已签收，签收是本人签收，感谢您使用申通快递，期待再次为您服务"/>
+
+        <TextView
+            android:id="@+id/remark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="备注: 无"
+            android:visibility="gone"
+            android:textColor="#888888"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="#888888"
+            android:text="2016-08-22 12:53:31"
+            android:layout_marginBottom="15dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.6dp"
+            android:background="#e8e8e8"/>
+
+    </LinearLayout>
+
+</LinearLayout>

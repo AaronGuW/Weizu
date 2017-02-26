@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/contact_photo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/goodspic"/>
+
+    <TextView
+        android:id="@+id/contact_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/contacts"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:layout_toRightOf="@+id/contact_photo"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="4dp"/>
+
+    <TextView
+        android:id="@+id/chatting_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/chattinghistory"
+        android:layout_alignLeft="@+id/contact_name"
+        android:layout_below="@+id/contact_name"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/last_chatting_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lastchattingtime"
+        android:layout_alignParentRight="true"
+        android:textSize="12sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"/>
+
+</RelativeLayout>

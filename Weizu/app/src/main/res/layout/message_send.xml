@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="3.5"/>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="6.5">
+
+        <TextView
+            android:id="@+id/sentence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/sender_photo"
+            android:background="@drawable/balloon_send"
+            android:layout_marginRight="5dp"
+            android:paddingLeft="12dp"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:paddingRight="16dp"
+            android:textSize="16sp"
+            android:text="你好"/>
+
+        <ImageView
+            android:id="@+id/sender_photo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/goodspic"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

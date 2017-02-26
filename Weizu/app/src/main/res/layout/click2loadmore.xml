@@ -1,0 +1,14 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="40dp">
+
+    <TextView
+        android:id="@+id/hint"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="@string/click2loadmore"
+        android:gravity="center"
+        android:clickable="true"/>
+
+</LinearLayout>

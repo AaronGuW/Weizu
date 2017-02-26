@@ -1,0 +1,416 @@
+<resources>
+    <string name="app_name">微租</string>
+    <string name="search">搜索</string>
+    <string name="hot">热搜</string>
+    <string name="newitem">今日新品</string>
+    <string name="promotion">推广</string>
+    <string name="takephoto">拍照上传</string>
+    <string name="fromalbum">从图库中选择</string>
+    <string name="hotsearch">热搜历史</string>
+    <string name="searchhistory">搜索历史</string>
+    <string name="searchresult">搜索结果</string>
+    <string name="filter">筛选条件</string>
+    <string name="rank">综合排序</string>
+    <string name="contacts">联系人</string>
+    <string name="trolley">购物车</string>
+    <string name="amount">租赁数量</string>
+    <string name="renttime">租赁时长</string>
+    <string name="day">天</string>
+    <string name="hour">小时</string>
+    <string name="note">备注</string>
+    <string name="comments">商品评论</string>
+    <string name="makecomment">评价订单</string>
+    <string name="note_hint">选填 对本次租赁的说明</string>
+    <string name="LogRegister">登录/注册</string>
+    <string name="editaddress">修改收货地址</string>
+    <string name="newaddress">新建收货地址</string>
+    <string name="chooseaddress">选择收货地址</string>
+    <string name="label">标签</string>
+    <string name="recipient">姓名</string>
+    <string name="phonenumber">手机</string>
+    <string name="address">地址</string>
+    <string name="myaddress">收货地址</string>
+    <string name="expressInfo">物流信息</string>
+    <string name="confirmpayment">确认支付</string>
+    <string name="confirmorder">确认订单</string>
+    <string name="title">标题</string>
+    <string name="viewComments">查看评论</string>
+    <string name="description">文字描述</string>
+    <string name="category">分类</string>
+    <string name="childtype">子类</string>
+    <string name="deposit">押金</string>
+    <string name="period">计费周期</string>
+    <string name="freight">运费</string>
+    <string name="contactinfo">联系方式</string>
+    <string name="region">所在地</string>
+    <string name="myrelease">我的发布</string>
+    <string name="recipient2">收件人</string>
+    <string name="rentfee">租金</string>
+    <string name="howtoreceive">收货方式</string>
+    <string name="howtoreturn">还货方式</string>
+    <string name="facetoface">面交</string>
+    <string name="express">快递</string>
+    <string name="transfee">运费</string>
+    <string name="sales">总销量</string>
+    <string name="lessor">出租方</string>
+    <string name="rentnow">立即租用</string>
+    <string name="refund">申请退款</string>
+    <string name="close">关闭订单</string>
+    <string name="process">进度信息</string>
+    <string name="input_exp_id">输入物流单号</string>
+    <string name="confirmgiveout">确认交付</string>
+    <string name="confirmsignfor">确认签收</string>
+    <string name="complain">申诉</string>
+    <string name="myorder">我租用的</string>
+    <string name="myrelease2">我租出的</string>
+    <string name="login">登录</string>
+    <string name="register">注册</string>
+    <string name="account">账号</string>
+    <string name="click_to_reg">立即注册</string>
+    <string name="input_phone">手机号</string>
+    <string name="input_username">请输入用户名</string>
+    <string name="input_password">密码</string>
+    <string name="leaser">出租方</string>
+    <string name="leasee">承租方</string>
+    <string name="remember">记住账号</string>
+    <string name="forget">忘记密码？</string>
+    <string name="verifycode">短信验证码</string>
+    <string name="getVerifyCode">获取验证码</string>
+    <string name="username">用户名 小于16个字符</string>
+    <string name="password">密码 6–16位字母与数字</string>
+    <string name="password_confirm">确认密码</string>
+    <string name="setphoto">点击设置头像</string>
+    <string name="myAccount">我的账号</string>
+    <string name="nickname">昵称:</string>
+    <string name="changepassword">修改密码</string>
+    <string name="bindAlipay">绑定支付宝</string>
+    <string name="unbinded">未绑定</string>
+    <string name="bind">绑定</string>
+    <string name="inputAlipay">输入支付宝账号</string>
+    <string name="confirmAlipay">再次输入</string>
+    <string name="unbind">解除绑定</string>
+    <string name="rebind">更改绑定</string>
+    <string name="confirm_unbind">确认要解除绑定当前支付宝账号吗？</string>
+    <string name="whybind">* 您的出租收益将通过转账的形式到达您的支付宝账户</string>
+    <string name="manageAddress">管理收货地址</string>
+    <string name="feedback">问题反馈</string>
+    <string name="hint_feedback">使用问题中若遇到问题，请发送邮件至 3191074245@qq.com，邮件中请注明您的账号ID并详细描述所遇到的问题，我们将及时为您解决~</string>
+    <string name="userid">ID: </string>
+    <string name="newPortrait">更换头像</string>
+    <string name="logout">退出当前账号</string>
+    <string name="delete">删除</string>
+    <string name="edit">编辑</string>
+    <string name="loading">加载中...</string>
+    <string name="addToTrolleyOK">已加入购物车</string>
+    <string name="alreadyInTrolley">该商品已在购物车中</string>
+    <string name="fullTrolley">您的购物车已满</string>
+    <string name="loginFirst">请先登录您的账号~</string>
+    <string name="notalk">(～￣▽￣)～ 您不能和自己聊天哦...</string>
+    <string name="yourRelease">(～￣▽￣)～ 这是您自己发布的商品哦...</string>
+    <string name="noComment">(～￣▽￣)～ 该商品目前没有评论...</string>
+    <string name="deletedgoods">该商品已下架</string>
+    <string name="loging">登录中，请稍候......</string>
+    <string name="waiting_orderInfo">正在下单，请稍候......</string>
+    <string name="waiting_payResult">正在确认支付结果，请稍候......</string>
+    <string name="waiting_updateOrder">正在更新订单状态，请稍候......</string>
+    <string name="waiting_refund">正在提交退款申请，请稍候......</string>
+    <string name="waiting_close">正在提交关闭订单请求，请稍候......</string>
+    <string name="waiting_loading">正在载入订单，请稍候......</string>
+    <string name="click2loadmore">点击加载更多</string>
+    <string name="allLoaded">已加载全部评论</string>
+    <string name="noTarget">请先选择一件要结算的商品</string>
+    <string name="oldpassword">原密码</string>
+    <string name="newpassword">新密码</string>
+    <string name="confirmnew">确认新密码</string>
+    <string name="submitchanges">提交更改</string>
+
+    <string name="go_comment">前去评价</string>
+    <string name="view_comments">查看评价</string>
+    <string name="hint_commentOverall">总体评价</string>
+    <string name="hint_commentLeaser">出租方评价</string>
+    <string name="hint_makesomecomments">满意与否,说几句吧</string>
+    <string name="comment">发表评价</string>
+    <string name="comment_positive">好评</string>
+    <string name="comment_neutral">中评</string>
+    <string name="comment_negative">差评</string>
+
+    <string name="rentTime">租赁时长</string>
+    <string name="receiveWay">收货方式</string>
+    <string name="returnWay">还货方式</string>
+    <string name="shouldPay">应支付：</string>
+    <string name="SelectPay">选择支付方式</string>
+    <string name="alipay">支付宝</string>
+
+    <string name="stage0">等待承租方付款</string>
+    <string name="stage1">等待出租方确认</string>
+    <string name="stage2">等待发货</string>
+    <string name="stage3">等待签收</string>
+    <string name="stage4">等待承租方发货</string>
+    <string name="stage5">等待出租方签收</string>
+    <string name="stage6">交易完成</string>
+    <string name="stageClose">已关闭</string>
+    <string name="stage6_leaser_commented">出租方已评</string>
+    <string name="stage6_leasee_commented">承租方已评</string>
+    <string name="stage6_both_commented">双方已评</string>
+    <string name="stage6_uncommented">待评价</string>
+
+    <string name="kdniao">本数据由 快递鸟® 提供</string>
+    <string name="warning_frequency">请不要频繁查询同一订单</string>
+
+    <string name="lessee_stage1_finish">出租者已确认</string>
+    <string name="lessee_stage2_finish">已发货</string>
+    <string name="lessee_stage3_finish">您已签收</string>
+    <string name="lessee_stage4_finish">您已发货</string>
+    <string name="lessee_stage5_finish">出租者已签收</string>
+
+    <string name="lessor_stage1_finish">您已确认订单</string>
+    <string name="lessor_stage2_finish">您已发货</string>
+    <string name="lessor_stage3_finish">租用者已签收</string>
+    <string name="lessor_stage4_finish">租用者已发货</string>
+    <string name="lessor_stage5_finish">您已签收</string>
+
+    <string name="check_exp">查物流</string>
+    
+    <string-array name="categories">
+        <item>图书</item>
+        <item>电子产品</item>
+        <item>交通工具</item>
+        <item>服饰</item>
+        <item>运动户外</item>
+        <item>日化</item>
+        <item>活动用品</item>
+        <item>时间</item>
+        <item>技能</item>
+        <item>其他</item>
+    </string-array>
+
+    <string-array name="Books">
+        <item>数学类</item>
+        <item>计算机类</item>
+        <item>土木类</item>
+        <item>建筑类</item>
+        <item>英语类</item>
+        <item>政治类</item>
+    </string-array>
+
+    <string-array name="Electronics">
+        <item>手机</item>
+        <item>笔记本</item>
+        <item>单反</item>
+        <item>平板电脑</item>
+        <item>电子书</item>
+        <item>耳机</item>
+    </string-array>
+
+    <string-array name="Transportation">
+        <item>自行车</item>
+        <item>电动独轮车</item>
+        <item>体感车</item>
+        <item>汽车</item>
+        <item>滑板</item>
+        <item>轮滑鞋</item>
+    </string-array>
+
+    <string-array name="Clothes">
+        <item>表演服装</item>
+        <item>校服</item>
+        <item>正装</item>
+        <item>晚装</item>
+        <item>cosplay</item>
+        <item>日常服饰</item>
+    </string-array>
+
+    <string-array name="Sports">
+        <item>球类</item>
+        <item>组队装备</item>
+        <item>健身器材</item>
+        <item>户外装备</item>
+        <item>运动配件</item>
+        <item>可穿戴设备</item>
+    </string-array>
+
+    <string-array name="Chemical">
+        <item>彩妆</item>
+        <item>化妆用品</item>
+        <item>美发工具</item>
+        <item>美甲工具</item>
+        <item>美体工具</item>
+        <item>护肤品</item>
+    </string-array>
+
+    <string-array name="Activities">
+        <item>帐篷</item>
+        <item>便携桌椅</item>
+        <item>音箱</item>
+        <item>桌游</item>
+        <item>烧烤工具</item>
+        <item>日用品</item>
+    </string-array>
+
+    <string-array name="Time">
+        <item>高数辅导</item>
+        <item>乒乓陪练</item>
+        <item>代点名</item>
+        <item>代购</item>
+        <item>刷锻</item>
+        <item>健身陪练</item>
+    </string-array>
+
+    <string-array name="Skill">
+        <item>游泳教学</item>
+        <item>PPT制作</item>
+        <item>PS制作</item>
+        <item>大作业</item>
+        <item>约会技巧</item>
+        <item>海报</item>
+    </string-array>
+
+    <string-array name="Others">
+        <item>音像制品</item>
+        <item>厨具</item>
+        <item>软件</item>
+        <item>乐器</item>
+        <item>小家电</item>
+        <item>办公用品</item>
+    </string-array>
+
+    <string-array name="period">
+        <item>小时</item>
+        <item>天</item>
+    </string-array>
+
+    <string-array name="sort">
+        <item>综合排序</item>
+        <item>价格由高到低</item>
+        <item>价格由低到高</item>
+        <item>销量由高到低</item>
+        <item>信用由高到低</item>
+    </string-array>
+
+    <string-array name="filter">
+        <item>全部</item>
+        <item>价格区间</item>
+        <item>所在地</item>
+        <item>商品分类</item>
+    </string-array>
+
+    <!--warning-->
+    <string name="warning_emptypnum">手机号码不可为空</string>
+    <string name="warning_emptyun">用户名不可为空</string>
+    <string name="warning_emptypwd">密码不可为空</string>
+    <string name="warning_emptypwdconfirm">确认密码不可为空</string>
+    <string name="warning_diffpwd">两次输入的密码不一致</string>
+    <string name="warning_emptyvcode">验证码不可为空</string>
+    <string name="warning_invalidpnum">请正确输入您的手机号</string>
+    <string name="warning_wrongvcode">验证码错误</string>
+    <string name="warning_duplicatepnum">该手机号已被注册</string>
+    <string name="warning_duplicateun">该用户名已被注册</string>
+
+    <!--temp-->
+    <string name="goodsname">商品名称</string>
+    <string name="brief">商品一句话介绍</string>
+    <string name="price">价格</string>
+    <string name="sum">合计</string>
+    <string name="chattinghistory">最近聊天记录</string>
+    <string name="lastchattingtime">10:00 PM</string>
+    <string name="warning_emptytitle">*标题不可为空</string>
+    <string name="warning_emptydescription">*文字描述不可为空</string>
+    <string name="warning_emptycategory">*请选择分类</string>
+    <string name="warning_emptyprice">*价格不可为空</string>
+    <string name="warning_emptydeposit">*押金不可为空</string>
+    <string name="warning_emptyfreight">*运费不可为空</string>
+    <string name="warning_emptycontactinfo">*联系方式不可为空</string>
+    <string name="warning_emptyregion">*所在地不可为空</string>
+
+    <!--categories-->
+    <string name="books">图书</string>
+    <string name="electronics">电子\n产品</string>
+    <string name="transportation">交通\n工具</string>
+    <string name="clothes">服饰</string>
+    <string name="sports">运动\n户外</string>
+    <string name="chemical">日化</string>
+    <string name="activities">活动\n用品</string>
+    <string name="time">时间</string>
+    <string name="skill">技能</string>
+    <string name="others">其他</string>
+
+    <!--books-->
+    <string name="math">数学类</string>
+    <string name="computer">计算机类</string>
+    <string name="construction">土木类</string>
+    <string name="architecture">建筑类</string>
+    <string name="english">英语类</string>
+    <string name="politics">政治类</string>
+
+    <!--electronics-->
+    <string name="cellphone">手机</string>
+    <string name="laptop">笔记本</string>
+    <string name="SLR">单反</string>
+    <string name="tablet">平板电脑</string>
+    <string name="ebook">电子书</string>
+    <string name="headphone">耳机</string>
+
+    <!--transportation-->
+    <string name="bike">自行车</string>
+    <string name="unibike">电动独轮车</string>
+    <string name="motionbike">体感车</string>
+    <string name="auto">汽车</string>
+    <string name="skateboard">滑板</string>
+    <string name="roller">轮滑鞋</string>
+
+    <!--clothes-->
+    <string name="costume">表演服装</string>
+    <string name="schooluniform">校服</string>
+    <string name="suit">正装</string>
+    <string name="eveningdressing">晚装</string>
+    <string name="cosplay">cosplay服饰</string>
+    <string name="dailyoutfit">日常服饰</string>
+
+    <!--sports-->
+    <string name="balls">球类</string>
+    <string name="team">组队装备</string>
+    <string name="fitness">健身器材</string>
+    <string name="outdoor">户外装备</string>
+    <string name="accessory">运动配件</string>
+    <string name="wearable">可穿戴设备</string>
+
+    <!--chemical-->
+    <string name="makeup">彩妆</string>
+    <string name="makeuptools">化妆工具</string>
+    <string name="hairdressing">美发工具</string>
+    <string name="nail">美甲工具</string>
+    <string name="bodycare">美体工具</string>
+    <string name="scream">护肤品</string>
+
+    <!--activity-->
+    <string name="tent">帐篷</string>
+    <string name="portablefurniture">便携桌椅</string>
+    <string name="audio">音箱</string>
+    <string name="boardgame">桌游</string>
+    <string name="BBQ">烧烤用具</string>
+    <string name="daily">日用品</string>
+
+    <!--time-->
+    <string name="mathtutor">高数辅导</string>
+    <string name="pingpang">乒乓陪练</string>
+    <string name="attendance">代点名</string>
+    <string name="shopping">代购</string>
+    <string name="exercise">刷锻</string>
+    <string name="fitting">健身陪练</string>
+
+    <!--skill-->
+    <string name="swim">游泳教学</string>
+    <string name="ppt">PPT制作</string>
+    <string name="ps">PS制作</string>
+    <string name="project">大作业</string>
+    <string name="date">约会技巧</string>
+    <string name="poster">海报</string>
+
+    <!--others-->
+    <string name="audiovisual">音像制品</string>
+    <string name="kitchen">厨具</string>
+    <string name="software">软件</string>
+    <string name="musicalinstrument">乐器</string>
+    <string name="appliance">小家电</string>
+    <string name="office">办公用品</string>
+</resources>

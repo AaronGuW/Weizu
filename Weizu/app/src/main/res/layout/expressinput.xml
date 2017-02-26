@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp">
+
+    <LinearLayout
+        android:id="@+id/progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="invisible">
+
+        <ProgressBar
+            android:layout_width="25dp"
+            android:layout_height="25dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:gravity="center_vertical"
+            android:text="查询中"
+            android:layout_marginLeft="5dp"
+            android:textSize="12sp"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="5dp">
+
+        <EditText
+            android:id="@+id/expNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="在此输入快递单号"
+            android:inputType="number"
+            android:layout_toLeftOf="@+id/identify"
+            android:textColor="#000000"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/identify"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:text="识别"
+            android:textColor="#e8591a"
+            android:clickable="true"
+            android:layout_centerVertical="true"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:layout_marginLeft="5dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:gravity="center"
+            android:background="@drawable/themebtn_stroke"/>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/comBar"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="5dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/ok"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:id="@+id/comName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="韵达快递"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e8e8e8"
+        android:layout_above="@+id/buttons"/>
+
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/cancelInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:text="@string/rc_cancel"
+            android:gravity="center"
+            android:padding="12dp"
+            android:textColor="#000000"
+            android:background="@drawable/nobordbg"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#e8e8e8"/>
+
+        <TextView
+            android:id="@+id/confirmExpNo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/rc_confirm"
+            android:clickable="false"
+            android:gravity="center"
+            android:padding="12dp"
+            android:textColor="#888888"
+            android:background="@drawable/nobordbg"/>
+
+    </LinearLayout>
+
+</LinearLayout>

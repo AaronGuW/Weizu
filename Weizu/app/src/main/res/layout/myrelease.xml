@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="23"
+        android:orientation="horizontal"
+        android:background="#e8591a">
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:clickable="true"
+            android:padding="10dp"
+            android:src="@drawable/back"/>
+
+        <TextView
+            android:id="@+id/headline"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="11"
+            android:text="@string/myrelease"
+            android:textSize="18sp"
+            android:textColor="#ffffff"
+            android:gravity="center"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#e8e8e8"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="229"
+        android:orientation="vertical">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipelist"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="100">
+
+            <ListView
+                android:id="@+id/myreleaselist"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#e8e8e8"/>
+
+        <ImageView
+            android:id="@+id/newrelease"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="11"
+            android:padding="10dp"
+            android:src="@drawable/release"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

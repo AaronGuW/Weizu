@@ -1,0 +1,23 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+    </style>
+
+    <style name="searchoption_anim_style">
+        <item name="android:windowEnterAnimation">@anim/searchoption_fade_in</item>
+        <item name="android:windowExitAnimation">@anim/searchoption_fade_out</item>
+    </style>
+
+    <style name="addtotrolley_anim_style">
+        <item name="android:windowEnterAnimation">@anim/notation_addtotrolley_fade_in</item>
+        <item name="android:windowExitAnimation">@anim/notation_addtotrolley_fade_out</item>
+    </style>
+
+    <style name="bigimage_anim_style">
+        <item name="android:windowEnterAnimation">@anim/bigimage_fade_in</item>
+        <item name="android:windowExitAnimation">@anim/bigimage_fade_out</item>
+    </style>
+
+</resources>

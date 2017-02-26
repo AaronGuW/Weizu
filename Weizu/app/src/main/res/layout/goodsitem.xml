@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="#ffffff"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/goodpic"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/goodspic"
+        android:layout_gravity="left"/>
+
+    <TextView
+        android:id="@+id/goodname"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="@string/goodsname"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:layout_toRightOf="@id/goodpic"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="2dp"/>
+
+    <TextView
+        android:id="@+id/goodbrief"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="top"
+        android:text="@string/brief"
+        android:textSize="10sp"
+        android:layout_toRightOf="@id/goodpic"
+        android:layout_toLeftOf="@+id/goodprice"
+        android:layout_alignLeft="@id/goodname"
+        android:layout_below="@id/goodname"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:maxLines="2"
+        android:maxLength="40"/>
+
+    <TextView
+        android:id="@+id/goodprice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/price"
+        android:textSize="18sp"
+        android:textColor="#e8591a"
+        android:layout_alignBottom="@id/goodpic"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="6dp"
+        android:layout_marginBottom="3dp"/>
+
+    <TextView
+        android:id="@+id/goodloc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="地区"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="3dp"/>
+
+</RelativeLayout>

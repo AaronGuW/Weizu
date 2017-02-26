@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="23"
+        android:orientation="horizontal"
+        android:background="#e8591a">
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:clickable="true"
+            android:padding="10dp"
+            android:src="@drawable/back"/>
+
+        <TextView
+            android:id="@+id/headline"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="11"
+            android:text="@string/expressInfo"
+            android:textSize="18sp"
+            android:textColor="#ffffff"
+            android:gravity="center"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="206"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="物流状态: 未发出"/>
+
+        <TextView
+            android:id="@+id/company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="承运公司: 未知"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp" />
+
+        <TextView
+            android:id="@+id/expNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="运单编号: 未知"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="10dp"
+            android:background="#bbbbbb"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="#eeeeee"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#bbbbbb"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/traces"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#999999"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="23"
+        android:text="@string/kdniao"
+        android:gravity="center"/>
+
+</LinearLayout>

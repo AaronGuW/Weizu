@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#e8e8e8"
+            android:gravity="center_vertical"
+            android:text="@string/hotsearch"
+            android:textSize="16sp"
+            android:layout_marginLeft="10dp"/>
+
+        <ListView
+            android:id="@+id/hot_search"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            android:padding="3dp"
+            android:background="#ffffff"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="0dp"
+        android:layout_weight="7">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:background="#e8e8e8"
+            android:gravity="center_vertical"
+            android:textSize="16sp"
+            android:text="@string/searchhistory"
+            android:layout_marginLeft="10dp"/>
+
+        <ListView
+            android:id="@+id/search_history"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="35"
+            android:padding="3dp"
+            android:background="#ffffff"/>
+
+    </LinearLayout>
+
+</LinearLayout>

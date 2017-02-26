@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:orientation="vertical"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:descendantFocusability="blocksDescendants">
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:text="商品信息"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:text="金额"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.5"
+            android:text="数量"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="10dp"
+            android:text="操作"
+            android:gravity="center"/>
+    </LinearLayout>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/checkbtn"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:src="@drawable/unselected"
+            android:padding="10dp"/>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4">
+
+            <ImageView
+                android:id="@+id/goodspicture"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="-10dp"
+                android:padding="8dp"
+                android:src="@drawable/goodspic"/>
+
+            <TextView
+                android:id="@+id/goodsname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/goodspicture"
+                android:layout_toRightOf="@+id/goodspicture"
+                android:layout_marginTop="8dp"
+                android:text="@string/goodsname"
+                android:maxLines="1"
+                android:maxLength="8"
+                android:textColor="#000000"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/brief"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/goodsname"
+                android:layout_below="@+id/goodsname"
+                android:textSize="8sp"
+                android:layout_marginRight="6dp"
+                android:maxLines="2"
+                android:maxLength="22"
+                android:text="@string/brief"
+                android:layout_marginTop="6dp"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/totalPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:text="¥1.00"
+            android:textSize="12sp"
+            android:textColor="#e8591a"/>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.5">
+
+            <ImageView
+                android:id="@+id/minus"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/minus"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"/>
+
+            <EditText
+                android:id="@+id/amount"
+                android:layout_width="30dp"
+                android:layout_height="18dp"
+                android:background="@drawable/amount"
+                android:inputType="number"
+                android:text="1"
+                android:maxLength="3"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:layout_alignTop="@+id/minus"
+                android:layout_toLeftOf="@+id/minus"
+                android:layout_marginRight="3dp"/>
+
+            <ImageView
+                android:id="@+id/plus"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="3dp"
+                android:layout_toLeftOf="@+id/amount"
+                android:layout_alignTop="@+id/amount"
+                android:clickable="true"
+                android:src="@drawable/plus"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/deleteItem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:text="@string/delete"
+            android:textColor="#000000"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+

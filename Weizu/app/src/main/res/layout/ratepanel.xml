@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200dp"
+    android:layout_height="60dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="15dp"
+        android:textSize="12sp"
+        android:text="请打分"/>
+
+    <LinearLayout
+        android:id="@+id/stars"
+        android:layout_width="162dp"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:id="@+id/star1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="3dp"
+            android:src="@drawable/star_full"/>
+
+        <ImageView
+            android:id="@+id/star2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="3dp"
+            android:src="@drawable/star_full"/>
+
+        <ImageView
+            android:id="@+id/star3"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="3dp"
+            android:src="@drawable/star_full"/>
+
+        <ImageView
+            android:id="@+id/star4"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="3dp"
+            android:src="@drawable/star_full"/>
+
+        <ImageView
+            android:id="@+id/star5"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/star_full"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="162dp"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true">
+
+        <View
+            android:id="@+id/left_1"
+            android:layout_width="15dp"
+            android:layout_height="30dp"
+            android:clickable="true"/>
+
+        <View
+            android:id="@+id/right_1"
+            android:layout_width="15dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="3dp"
+            android:clickable="true"/>
+
+        <View
+            android:id="@+id/left_2"
+            android:layout_width="15dp"
+            android:layout_height="30dp"
+            android:clickable="true"/>
+
+        <View
+            android:id="@+id/right_2"
+            android:layout_width="15dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="3dp"
+            android:clickable="true"/>
+
+        <View
+            android:id="@+id/left_3"
+            android:layout_width="15dp"
+            android:layout_height="30dp"
+            android:clickable="true"/>
+
+        <View
+            android:id="@+id/right_3"
+            android:layout_width="15dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="3dp"
+            android:clickable="true"/>
+
+        <View
+            android:id="@+id/left_4"
+            android:layout_width="15dp"
+            android:layout_height="30dp"
+            android:clickable="true"/>
+
+        <View
+            android:id="@+id/right_4"
+            android:layout_width="15dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="3dp"
+            android:clickable="true"/>
+
+        <View
+            android:id="@+id/left_5"
+            android:layout_width="15dp"
+            android:layout_height="30dp"
+            android:clickable="true"/>
+
+        <View
+            android:id="@+id/right_5"
+            android:layout_width="15dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="3dp"
+            android:clickable="true"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

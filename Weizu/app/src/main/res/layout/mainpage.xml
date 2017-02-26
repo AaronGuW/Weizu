@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/maincontent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="0dp"
+        android:layout_weight="56">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="7"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:background="#FFFFFF">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="2dp"
+            android:background="#e8e8e8"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="2dp"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="10">
+
+                <ImageView
+                    android:id="@+id/homepage_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:src="@drawable/homepage"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="10">
+
+                <ImageView
+                    android:id="@+id/category_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:src="@drawable/category"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="10">
+
+                <ImageView
+                    android:id="@+id/message_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:src="@drawable/message"/>
+
+                <TextView
+                    android:id="@+id/unread"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="3dp"
+                    android:visibility="gone"
+                    android:text="0"
+                    android:textSize="8sp"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/reddot"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="10">
+
+                <ImageView
+                    android:id="@+id/trolley_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:src="@drawable/trolley"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="10">
+
+                <ImageView
+                    android:id="@+id/user_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:src="@drawable/user"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

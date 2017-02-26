@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="23"
+        android:background="#e8591a"
+        android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:text="@string/contacts"/>
+
+    <ListView
+        android:id="@+id/contactslist"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="201"
+        android:padding="5dp"/>
+
+
+</LinearLayout>

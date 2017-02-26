@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="23"
+        android:orientation="horizontal"
+        android:background="#e8591a">
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:clickable="true"
+            android:padding="10dp"
+            android:src="@drawable/back"/>
+
+        <TextView
+            android:id="@+id/headline"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="11"
+            android:text="@string/makecomment"
+            android:textSize="18sp"
+            android:textColor="#ffffff"
+            android:gravity="center"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#e8e8e8"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="229">
+
+        <ImageView
+            android:id="@+id/cover"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/goodspic"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"/>
+
+        <EditText
+            android:id="@+id/comment"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_toRightOf="@+id/cover"
+            android:layout_alignBottom="@+id/cover"
+            android:hint="@string/hint_makesomecomments"
+            android:gravity="top"
+            android:textSize="12sp"
+            android:padding="2dp"
+            android:layout_marginLeft="8dp"
+            android:maxLength="140"
+            android:background="@null"/>
+
+        <TextView
+            android:id="@+id/all_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hint_commentOverall"
+            android:textColor="#000000"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/cover"
+            android:layout_marginLeft="15dp"/>
+
+        <RadioGroup
+            android:id="@+id/overall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_toRightOf="@+id/all_header"
+            android:layout_alignBottom="@+id/all_header"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp">
+
+            <RadioButton
+                android:id="@+id/radioButton_Positive"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:checked="true"
+                android:text="好评"/>
+
+            <RadioButton
+                android:id="@+id/radioButton_Neutral"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:text="@string/comment_neutral"/>
+
+            <RadioButton
+                android:id="@+id/radioButton_Negative"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:text="@string/comment_negative"/>
+
+        </RadioGroup>
+
+        <View
+            android:id="@+id/border"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="#e8e8e8"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/all_header" />
+
+        <TextView
+            android:id="@+id/leaser_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hint_commentLeaser"
+            android:textColor="#000000"
+            android:layout_below="@+id/border"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="15dp"/>
+        
+        <LinearLayout
+            android:id="@+id/stars"
+            android:layout_width="162dp"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_alignBottom="@+id/leaser_head">
+            
+            <ImageView
+                android:id="@+id/star1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="3dp"
+                android:src="@drawable/star_full"/>
+            
+            <ImageView
+                android:id="@+id/star2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="3dp"
+                android:src="@drawable/star_full"/>
+
+            <ImageView
+                android:id="@+id/star3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="3dp"
+                android:src="@drawable/star_full"/>
+
+            <ImageView
+                android:id="@+id/star4"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="3dp"
+                android:src="@drawable/star_full"/>
+
+            <ImageView
+                android:id="@+id/star5"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/star_full"/>
+            
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="162dp"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            android:layout_alignLeft="@+id/stars"
+            android:layout_alignBottom="@+id/stars">
+            
+            <View
+                android:id="@+id/left_1"
+                android:layout_width="15dp"
+                android:layout_height="30dp"
+                android:clickable="true"/>
+
+            <View
+                android:id="@+id/right_1"
+                android:layout_width="15dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="3dp"
+                android:clickable="true"/>
+
+            <View
+                android:id="@+id/left_2"
+                android:layout_width="15dp"
+                android:layout_height="30dp"
+                android:clickable="true"/>
+
+            <View
+                android:id="@+id/right_2"
+                android:layout_width="15dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="3dp"
+                android:clickable="true"/>
+
+            <View
+                android:id="@+id/left_3"
+                android:layout_width="15dp"
+                android:layout_height="30dp"
+                android:clickable="true"/>
+
+            <View
+                android:id="@+id/right_3"
+                android:layout_width="15dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="3dp"
+                android:clickable="true"/>
+
+            <View
+                android:id="@+id/left_4"
+                android:layout_width="15dp"
+                android:layout_height="30dp"
+                android:clickable="true"/>
+
+            <View
+                android:id="@+id/right_4"
+                android:layout_width="15dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="3dp"
+                android:clickable="true"/>
+
+            <View
+                android:id="@+id/left_5"
+                android:layout_width="15dp"
+                android:layout_height="30dp"
+                android:clickable="true"/>
+
+            <View
+                android:id="@+id/right_5"
+                android:layout_width="15dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="3dp"
+                android:clickable="true"/>
+            
+        </LinearLayout>
+        
+        <TextView
+            android:id="@+id/submit"
+            android:layout_width="240dp"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/themebtn"
+            android:textColor="#ffffff"
+            android:text="@string/comment"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:clickable="true"
+            android:layout_marginBottom="10dp"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="23"
+        android:orientation="horizontal"
+        android:background="#e8591a" >
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:padding="10dp"
+            android:src="@drawable/back"/>
+
+        <TextView
+            android:id="@+id/contact_name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="8"
+            android:textColor="#ffffff"
+            android:text="注册账号"
+            android:textSize="18sp"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#e8e8e8"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="229"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/setphoto"
+            android:layout_width="80dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="80dp"
+                android:layout_height="80dp">
+
+                <ImageView
+                    android:id="@+id/photo"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/usrphoto"/>
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/frame"/>
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/setphoto"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:textColor="#e8591a"
+                android:layout_marginTop="4dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/roundcorner_bordbg">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/pnum"
+                    android:layout_width="0dp"
+                    android:layout_weight="8"
+                    android:layout_height="40dp"
+                    android:background="@null"
+                    android:hint="@string/input_phone"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:imeOptions="actionNext"
+                    android:inputType="phone"
+                    android:maxLength="11"
+                    android:textColorHint="#a8a8a8"/>
+
+                <ImageView
+                    android:id="@+id/pnumcheck"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:padding="6dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/error"
+                    android:visibility="invisible"/>
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ffffff"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/username"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="8"
+                    android:background="@null"
+                    android:hint="@string/username"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLength="16"
+                    android:textColorHint="#a8a8a8"/>
+
+                <ImageView
+                    android:id="@+id/uncheck"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:padding="6dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/error"
+                    android:visibility="invisible"/>
+
+             </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ffffff"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/password"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="8"
+                    android:background="@null"
+                    android:hint="@string/password"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPassword"
+                    android:maxLength="16"
+                    android:textColorHint="#a8a8a8"/>
+
+                <ImageView
+                    android:id="@+id/pwdcheck"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:padding="6dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/error"
+                    android:visibility="invisible"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ffffff"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/password_confirm"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="8"
+                    android:background="@null"
+                    android:hint="@string/password_confirm"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPassword"
+                    android:maxLength="16"
+                    android:textColorHint="#a8a8a8"/>
+
+                <ImageView
+                    android:id="@+id/pwdconfirmcheck"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:padding="6dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/error"
+                    android:visibility="invisible"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ffffff"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/vcode"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:background="@null"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textColorHint="#a8a8a8"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:hint="短信验证码"/>
+
+                <ImageView
+                    android:id="@+id/vcodecheck"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="-5dp"
+                    android:padding="6dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/error"
+                    android:visibility="invisible"/>
+
+                <TextView
+                    android:id="@+id/get_vcode"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:text="@string/getVerifyCode"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:clickable="true"
+                    android:background="@drawable/themebtn"
+                    android:layout_margin="5dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/register"
+            android:clickable="false"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/disabledthemebtn"
+            android:text="@string/click_to_reg"
+            android:textSize="18sp"
+            android:textColor="#ffffff"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+</LinearLayout>

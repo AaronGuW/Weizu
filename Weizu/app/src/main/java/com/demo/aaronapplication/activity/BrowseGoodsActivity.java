@@ -247,9 +247,7 @@ public class BrowseGoodsActivity extends Activity implements View.OnClickListene
             String filename = md5s[i]+".jpeg";
             String path = imageManager.getImagePath(filename, ImageManager.GOODS);
             if (path != null) {
-                int size[] = UIUtil.getScreenSize(this);
-                Log.e("size",size[0]+" "+size[1]+"");
-                Picasso.with(this).load(new File(path)).resize((int)(size[0]*1.5),size[0]).centerInside().into(image);
+                Picasso.with(this).load(new File(path)).resize(720,480).centerInside().into(image);
                 v.findViewById(R.id.progress).setVisibility(View.GONE);
                 p.setLoaded();
                 p.setPath(path);

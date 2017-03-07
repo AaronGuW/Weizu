@@ -76,5 +76,9 @@ public class App extends Application {
         if (!file.exists()) {
             file.mkdir();
         }
+        file = new File(Environment.getExternalStorageDirectory().getPath()+"/weizu/img/thumbnails");
+        if (!file.exists()) {
+            file.mkdir();
+        }
     }
 }

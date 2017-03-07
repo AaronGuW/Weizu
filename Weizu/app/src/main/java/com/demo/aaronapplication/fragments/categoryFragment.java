@@ -32,7 +32,6 @@ public class categoryFragment extends Fragment implements View.OnClickListener {
     //icons and names of children, modify them when father class changes
     private ImageView[] child_icons;
     private TextView[] child_names;
-    private int side;
     //ids to be used for initialization
     private static final int ids[] = { R.id.child1, R.id.child1_icon, R.id.child1_name, R.id.child2, R.id.child2_icon, R.id.child2_name,
                                    R.id.child3, R.id.child3_icon, R.id.child3_name, R.id.child4, R.id.child4_icon, R.id.child4_name,
@@ -104,10 +103,9 @@ public class categoryFragment extends Fragment implements View.OnClickListener {
         }
 
         cur_father_class = BOOKS;
-        side = UIUtil.dp2px(getActivity(), 80);
         for (int i = 0 ; i != 6 ; ++i) {
             child_names[i].setText(getString(namestrid[cur_father_class][i]));
-            Picasso.with(getActivity()).load(icondrawableid[cur_father_class][i]).resize(side,side).centerInside().into(child_icons[i]);
+            Picasso.with(getActivity()).load(icondrawableid[cur_father_class][i]).resize(128,128).centerInside().into(child_icons[i]);
         }
         return v;
     }
@@ -178,7 +176,7 @@ public class categoryFragment extends Fragment implements View.OnClickListener {
             cur_father_class = category;
             for (int i = 0 ; i != 6 ; ++i) {
                 child_names[i].setText(getString(namestrid[category][i]));
-                Picasso.with(getActivity()).load(icondrawableid[category][i]).resize(side,side).centerInside().into(child_icons[i]);
+                Picasso.with(getActivity()).load(icondrawableid[category][i]).resize(128,128).centerInside().into(child_icons[i]);
                 //child_icons[i].setImageDrawable(getResources().getDrawable(icondrawableid[category][i]));
             }
         }

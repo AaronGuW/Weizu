@@ -204,8 +204,7 @@ public class OrderProcessActivity extends Activity implements View.OnClickListen
     @Override
     public void onFinishLoading(ImageView holder, String path) {
         if (holder != null) {
-            int side = UIUtil.dp2px(this, 60);
-            Picasso.with(this).load(new File(path)).resize(side, side).centerInside().into(holder);
+            Picasso.with(this).load(new File(path)).resize(128, 128).centerInside().into(holder);
         }
     }
 
@@ -223,13 +222,12 @@ public class OrderProcessActivity extends Activity implements View.OnClickListen
         ((TextView)findViewById(R.id.way_rtn)).setText(getString(order.getWay_rtn() == 0 ? R.string.facetoface : R.string.express));
 
 
-        String path = imageManager.getImagePath(order.getCoverName(), ImageManager.GOODS);
+        String path = imageManager.getImagePath(order.getCoverName(), ImageManager.THUMBNAIL);
         ImageView goods_pic = (ImageView)findViewById(R.id.goods_pic);
         if (path != null) {
-            int side = UIUtil.dp2px(this, 60);
-            Picasso.with(this).load(new File(path)).resize(side,side).centerInside().into(goods_pic);
+            Picasso.with(this).load(new File(path)).resize(128,128).centerInside().into(goods_pic);
         } else {
-            imageManager.downloadImage(goods_pic, order.getCoverName(), ImageManager.GOODS);
+            imageManager.downloadImage(goods_pic, order.getCoverName(), ImageManager.THUMBNAIL);
         }
         setProcess();
     }

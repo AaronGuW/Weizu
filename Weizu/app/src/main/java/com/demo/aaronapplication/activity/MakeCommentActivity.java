@@ -142,8 +142,7 @@ public class MakeCommentActivity extends Activity implements View.OnClickListene
     @Override
     public void onFinishLoading(ImageView holder, String path) {
         if (holder != null) {
-            int side = UIUtil.dp2px(this, 60);
-            Picasso.with(this).load(new File(path)).resize(side, side).centerInside().into(holder);
+            Picasso.with(this).load(new File(path)).resize(128, 128).centerInside().into(holder);
         }
     }
 
@@ -151,12 +150,11 @@ public class MakeCommentActivity extends Activity implements View.OnClickListene
         cover = (ImageView) findViewById(R.id.cover);
         String coverName = order.getCoverName();
         if (coverName != null) {
-            String path = imageManager.getImagePath(order.getCoverName(), ImageManager.GOODS);
+            String path = imageManager.getImagePath(order.getCoverName(), ImageManager.THUMBNAIL);
             if (path != null) {
-                int side = UIUtil.dp2px(this, 60);
-                Picasso.with(this).load(new File(path)).resize(side, side).centerInside().into(cover);
+                Picasso.with(this).load(new File(path)).resize(128, 128).centerInside().into(cover);
             } else {
-                imageManager.downloadImage(cover, order.getCoverName(), ImageManager.GOODS);
+                imageManager.downloadImage(cover, order.getCoverName(), ImageManager.THUMBNAIL);
             }
         }
         stars = new ImageView[5];

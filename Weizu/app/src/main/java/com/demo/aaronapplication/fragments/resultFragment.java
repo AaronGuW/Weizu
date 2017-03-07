@@ -51,13 +51,11 @@ public class resultFragment extends Fragment implements ImageManager.onFinishLoa
     private Handler resHandler;
 
     private ImageManager imageManager;
-    private int side; //商品封面的边长
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.goodspage, container, false);
         goodslist = (ListView)v.findViewById(R.id.goodslist);
 
-        side = UIUtil.dp2px(getActivity(), 60);
         imageManager = new ImageManager();
         imageManager.setOnFinishLoadListener(this);
 
@@ -109,12 +107,12 @@ public class resultFragment extends Fragment implements ImageManager.onFinishLoa
                 }
                 goods g = goodsArrayList.get(position);
                 if (g.hasCover()) {
-                    String path = imageManager.getImagePath(g.getCoverName(), ImageManager.GOODS);
+                    String path = imageManager.getImagePath(g.getCoverName(), ImageManager.THUMBNAIL);
                     ImageView holder = (ImageView)v.findViewById(R.id.goodpic);
                     if (path != null) {
-                        Picasso.with(getActivity()).load(new File(path)).resize(side,side).centerInside().into(holder);
+                        Picasso.with(getActivity()).load(new File(path)).resize(128, 128).centerInside().into(holder);
                     } else {
-                        imageManager.downloadImage(holder, g.getCoverName(), ImageManager.GOODS);
+                        imageManager.downloadImage(holder, g.getCoverName(), ImageManager.THUMBNAIL);
                     }
                 }
                 ((TextView)v.findViewById(R.id.goodname)).setText(g.getTitle());
@@ -183,7 +181,7 @@ public class resultFragment extends Fragment implements ImageManager.onFinishLoa
         try {
             Picasso.with(getActivity())
                     .load(new File(path))
-                    .resize(side, side)
+                    .resize(128, 128)
                     .centerInside()
                     .into(holder);
         } catch (Exception e) {

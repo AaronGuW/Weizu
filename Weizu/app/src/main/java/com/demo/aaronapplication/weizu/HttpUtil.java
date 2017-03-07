@@ -3,6 +3,7 @@ package com.demo.aaronapplication.weizu;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.demo.aaronapplication.activity.ReleaseActivity;
 
@@ -292,17 +293,22 @@ public class HttpUtil {
         }.start();
     }
 
-    public static void uploadRelease(final int action, final String TextUrl, final String ImageUrl, final JSONObject param, final String[] filePaths, final Handler handler) {
+    public static void uploadRelease(final int action, final String TextUrl, final String ImageUrl, final JSONObject param, final String[] paths, final Handler handler) {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                if (filePaths.length > 0) {
-                    //先计算所有图片的md5
-                    String[] md5s = new String[filePaths.length];
-                    JSONArray arr = null;
-                    for (int i = 0; i != filePaths.length; ++i) {
-                        md5s[i] = MD5Util.getImageMD5(filePaths[i]);
+                if (paths.length > 0) {
+                    //将图片保存到goods目录中，且对过大的图片进行缩放
+                    String[] md5s = new String[paths.length];
+                    for (int i = 0 ; i != paths.length ; ++i) {
+                        md5s[i] = ImageManager.ShrinkImage(paths[i]);
                     }
+                    Message msg = handler.obtainMessage();
+                    msg.what = 0;
+                    msg.arg1 = 0;
+                    msg.sendToTarget();
+
+                    JSONArray arr = null;
                     try {
                         param.put("cover", md5s[param.getInt("coverindex")]);
 
@@ -355,16 +361,21 @@ public class HttpUtil {
                     String CONTENT_TYPE = "multipart/form-data";
                     Log.e("start", "uploading");
                     int i = 0, retry = 0;
-                    while (i < filePaths.length) {
+                    while (i < paths.length) {
                         Log.e("uploading", i + "");
                         try {
                             if (exist.getBoolean(md5s[i])) {
+                                Message message = handler.obtainMessage();
+                                message.what = 0;
+                                message.arg1 = i + 1; //第i+1张图片上传成功
+                                message.sendToTarget();
+                                Log.e("message", String.valueOf(i+1)+" sent");
                                 //该图片已存在于服务器上
                                 i++;
                                 retry = 0;
                                 continue;
                             }
-                            File file = new File(filePaths[i]);
+                            File file = new File(ImageManager.saveDir[ImageManager.GOODS]+md5s[i]+".jpeg");
                             if (!file.exists()) {
                                 //应该不大可能出现
                                 i++;
@@ -420,12 +431,13 @@ public class HttpUtil {
                                 baos.close();
                                 final String result = new String(baos.toByteArray());
                                 if (result.equals("1")) {
-                                    i++;
-                                    retry = 0;
                                     Message message = handler.obtainMessage();
                                     message.what = 0;
                                     message.arg1 = i + 1; //第i+1张图片上传成功
                                     message.sendToTarget();
+                                    i++;
+                                    retry = 0;
+                                    Log.e("message", String.valueOf(i+1)+" sent");
                                 } else {
                                     //失败重试，最多三次
                                     if (retry < 3) {

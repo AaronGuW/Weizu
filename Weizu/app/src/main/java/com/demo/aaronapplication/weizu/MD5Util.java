@@ -1,11 +1,15 @@
 package com.demo.aaronapplication.weizu;
 
+import android.graphics.Bitmap;
 import android.util.Log;
 
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 import java.math.BigInteger;
 import java.security.MessageDigest;
@@ -85,6 +89,45 @@ public class MD5Util {
             try {
                 if (fis != null) {
                     fis.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        return null;
+    }
+
+    public static String getImageMD5(Bitmap image) {
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        image.compress(Bitmap.CompressFormat.JPEG, 100, baos);
+        InputStream isBm = new ByteArrayInputStream(baos.toByteArray());
+
+        try {
+            MessageDigest messageDigest = MessageDigest.getInstance("MD5");
+
+            int len = 0;
+            //普通流读取方式
+            byte[] buffer = new byte[1024 * 1024];
+            while ((len = isBm.read(buffer)) > 0) {
+                //该对象通过使用 update（）方法处理数据
+                messageDigest.update(buffer, 0, len);
+            }
+            BigInteger bigInt = new BigInteger(1, messageDigest.digest());
+            String md5 = bigInt.toString(16);
+            while (md5.length() < 32) {
+                md5 = "0" + md5;
+            }
+            return md5;
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (isBm != null) {
+                    isBm.close();
                 }
             } catch (IOException e) {
                 e.printStackTrace();

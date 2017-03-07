@@ -109,8 +109,7 @@ public class confirmpaymentFragment extends Fragment implements ImageManager.onF
     @Override
     public void onFinishLoading(ImageView holder, String path) {
         if (holder != null) {
-            int side = UIUtil.dp2px(getActivity(), 60);
-            Picasso.with(getActivity()).load(new File(path)).resize(side, side).centerInside().into(holder);
+            Picasso.with(getActivity()).load(new File(path)).resize(128, 128).centerInside().into(holder);
         }
     }
 
@@ -148,12 +147,11 @@ public class confirmpaymentFragment extends Fragment implements ImageManager.onF
             }
         });
 
-        String path = imageManager.getImagePath(target.getCoverName(), ImageManager.GOODS);
+        String path = imageManager.getImagePath(target.getCoverName(), ImageManager.THUMBNAIL);
         if (path != null) {
-            int side = UIUtil.dp2px(getActivity(), 60);
-            Picasso.with(getActivity()).load(new File(path)).resize(side,side).centerInside().into(goodspic);
+            Picasso.with(getActivity()).load(new File(path)).resize(128,128).centerInside().into(goodspic);
         } else {
-            imageManager.downloadImage(goodspic, target.getCoverName(), ImageManager.GOODS);
+            imageManager.downloadImage(goodspic, target.getCoverName(), ImageManager.THUMBNAIL);
         }
     }
 

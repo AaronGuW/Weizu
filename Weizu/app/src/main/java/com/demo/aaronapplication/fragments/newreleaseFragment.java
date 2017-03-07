@@ -141,15 +141,15 @@ public class newreleaseFragment extends Fragment implements View.OnClickListener
 
                     //检查完成后post提交订单
                     JSONObject param = packPOSTData();
-                    //HttpUtil.JSONHttpPOST(HttpUtil.host+"release",param, mHandler);
                     String[] paths = uris2paths();
                     if (paths == null) {
-                        Toast.makeText(getActivity(), "您有图片尚未加载完毕，请等候...", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), getString(R.string.image_unloaded), Toast.LENGTH_SHORT).show();
                         return;
                     }
                     Log.e("read path","gocha");
                     progressWindow = new ProgressWindow(imageArrayList.size());
                     progressWindow.show();
+
                     HttpUtil.uploadRelease(action, HttpUtil.host+"release", HttpUtil.host+"upload",param, paths, mHandler);
                 }
         }
@@ -191,7 +191,7 @@ public class newreleaseFragment extends Fragment implements View.OnClickListener
     }
 
     private void initView(View v) {
-        IVWidth = IVHeight = UIUtil.dp2px(getActivity(), 80);
+        IVWidth = IVHeight = 168;
         imageManager = new ImageManager();
         imageManager.setOnFinishLoadListener(this);
         inflater = LayoutInflater.from(getActivity());
@@ -325,6 +325,13 @@ public class newreleaseFragment extends Fragment implements View.OnClickListener
                 FragmentTransaction transaction = fm.beginTransaction();
                 transaction.replace(R.id.mainframe, new releaseokFragment());
                 transaction.commit();
+                if (action == ReleaseActivity.NEW) {
+                    Toast.makeText(getActivity(), "发布成功，您的商品将在1小时内完成上架", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(getActivity(), "修改成功", Toast.LENGTH_SHORT).show();
+                }
+            } else {
+                Toast.makeText(getActivity(), "发布失败", Toast.LENGTH_SHORT).show();
             }
         } else {
             Toast.makeText(getActivity(), "网络异常", Toast.LENGTH_SHORT).show();
@@ -552,7 +559,7 @@ public class newreleaseFragment extends Fragment implements View.OnClickListener
             LayoutInflater inflater = LayoutInflater.from(getActivity());
             View v = inflater.inflate(R.layout.loging, null);
             hint = (TextView)v.findViewById(R.id.hint);
-            hint.setText("正在上传图片，已完成0张,共"+String.valueOf(total)+"张");
+            hint.setText("正在调整图片大小...");
             pop = new PopupWindow(v, ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT, false);
             pop.setFocusable(true);
         }
@@ -571,7 +578,7 @@ public class newreleaseFragment extends Fragment implements View.OnClickListener
 
         public void setProgress(int p) {
             String text = null;
-            if (p != total) {
+            if (p < total) {
                 text = "正在上传图片，已完成" + String.valueOf(p) + "张,共" + String.valueOf(total) + "张";
             } else {
                 text = "正在上传文本信息...";

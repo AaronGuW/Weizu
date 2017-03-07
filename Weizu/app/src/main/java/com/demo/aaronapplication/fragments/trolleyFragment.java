@@ -54,7 +54,6 @@ public class trolleyFragment extends Fragment implements View.OnClickListener, S
     private TextView total;
 
     private ImageManager imageManager;
-    private int side;
 
     //private static final DecimalFormat decimalFormat = new DecimalFormat(".00");
     private static final DecimalFormat decimalFormat = new DecimalFormat("¥#,##0.00");
@@ -66,7 +65,6 @@ public class trolleyFragment extends Fragment implements View.OnClickListener, S
         View v = inflater.inflate(R.layout.trolleypage, container, false);
         imageManager = new ImageManager();
         imageManager.setOnFinishLoadListener(this);
-        side = UIUtil.dp2px(getActivity(), 50);
         listWrapper = (SwipeRefreshLayout)v.findViewById(R.id.listWrapper);
         listWrapper.setOnRefreshListener(this);
         goodslist = (ListView)v.findViewById(R.id.goodslist);
@@ -176,7 +174,7 @@ public class trolleyFragment extends Fragment implements View.OnClickListener, S
                     if (coverName != null) {
                         String path = imageManager.getImagePath(coverName, ImageManager.GOODS);
                         if (path != null) {
-                            Picasso.with(getActivity()).load(new File(path)).resize(side,side).centerInside().into(holder);
+                            Picasso.with(getActivity()).load(new File(path)).resize(100,100).centerInside().into(holder);
                         } else {
                             imageManager.downloadImage(holder, coverName, ImageManager.GOODS);
                         }
@@ -216,7 +214,7 @@ public class trolleyFragment extends Fragment implements View.OnClickListener, S
     @Override
     public void onFinishLoading(ImageView holder, String path) {
         try {
-            Picasso.with(getActivity()).load(new File(path)).resize(side, side).centerInside().into(holder);
+            Picasso.with(getActivity()).load(new File(path)).resize(100, 100).centerInside().into(holder);
         } catch (Exception e) {
             e.printStackTrace();
         }

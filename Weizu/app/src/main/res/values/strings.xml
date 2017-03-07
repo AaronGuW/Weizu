@@ -116,6 +116,7 @@
     <string name="waiting_refund">正在提交退款申请，请稍候......</string>
     <string name="waiting_close">正在提交关闭订单请求，请稍候......</string>
     <string name="waiting_loading">正在载入订单，请稍候......</string>
+    <string name="image_unloaded">您有图片尚未加载完毕，请等候...</string>
     <string name="click2loadmore">点击加载更多</string>
     <string name="allLoaded">已加载全部评论</string>
     <string name="noTarget">请先选择一件要结算的商品</string>

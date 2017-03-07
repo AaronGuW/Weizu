@@ -80,16 +80,10 @@ public class userFragment extends Fragment implements View.OnClickListener, Imag
                 String uid = account.getString("uid", "WTF");
                 String path = imageManager.getImagePath(uid+".jpeg", ImageManager.PORTRAIT);
                 if (path != null) {
-                    int side = UIUtil.dp2px(getActivity(),80);
-                    Picasso.with(getActivity()).load(new File(path)).resize(side,side).centerInside().into(user_photo);
+                    Picasso.with(getActivity()).load(new File(path)).resize(168,168).centerInside().into(user_photo);
                 } else {
                     imageManager.downloadImage(user_photo, uid+".jpeg", ImageManager.PORTRAIT);
                 }
-/*                Bitmap bitmap;
-                bitmap = BitmapFactory.decodeFile(filepath + uid + ".jpeg");
-                if (bitmap == null)
-                    bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.usrphoto);
-                user_photo.setImageBitmap(bitmap);*/
             }
         }
 
@@ -173,8 +167,7 @@ public class userFragment extends Fragment implements View.OnClickListener, Imag
     @Override
     public void onFinishLoading(ImageView holder, String path) {
         if (holder != null) {
-            int side = UIUtil.dp2px(getActivity(), 80);
-            Picasso.with(getActivity()).load(new File(path)).resize(side, side).centerInside().into(holder);
+            Picasso.with(getActivity()).load(new File(path)).resize(168, 168).centerInside().into(holder);
         }
     }
 

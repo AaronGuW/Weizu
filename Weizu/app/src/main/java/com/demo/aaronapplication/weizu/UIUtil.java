@@ -1,18 +1,29 @@
 package com.demo.aaronapplication.weizu;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Point;
+import android.media.Image;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+
 /**
  * Created by Aaron on 2016/8/25.
  */
 
 public class UIUtil {
+
 
     public static int dp2px(Context context, int dp) {
         DisplayMetrics dm = context.getResources().getDisplayMetrics();
@@ -48,4 +59,6 @@ public class UIUtil {
         }
         return result;
     }
+
+
 }

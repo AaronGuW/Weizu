@@ -284,11 +284,9 @@ public class homepageFragment extends Fragment implements View.OnClickListener {
     private void loadImage(int entry, String name) {
         if (isCached(name)) {
             String root = Environment.getExternalStorageDirectory().getPath();
-            int[] size = UIUtil.getScreenSize(getActivity());
-            Log.e("size",String.valueOf(size[0])+","+String.valueOf(size[1]));
             Picasso.with(getActivity())
                     .load(new File(root+"/weizu/img/home/"+name+".png"))
-                    .resize(size[0],(int)(size[0]*0.2647))
+                    .resize(720,190)
                     .centerCrop()
                     .into(entryViews[entry]);
         } else {
